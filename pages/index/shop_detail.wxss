@@ -11,6 +11,7 @@
 .swiper-tab-item{
     width: 30%; 
     color:#434343;
+    font-size: 28rpx;
 }
 .active{
     color:#d4237a;
@@ -18,4 +19,10 @@
 }
 swiper{
   text-align: center;
+}
+.swiperImg {
+  width: 100%;
+}
+.swiperImg image{
+  width: 100%;
 }

@@ -6,9 +6,28 @@ Page({
    */
   data: {
     id:'',
-    currentTab: 0
+    currentTab: 0,
+    indicatorDots: true,
+    autoplay: true,
+    interval: 5000,
+    duration: 1000,
+    imgData: [
+      {
+        "imgUrl": "../../img/xianggua_detail1.png",
+        "id": "1"
+      }, {
+        "imgUrl": '../../img/xianggua_detail2.png',
+        "id": "2"
+
+      }, {
+        "imgUrl": '../../img/xianggua_detail3.png',
+        "id": "3"
+
+      }
+    ],
 
   },
+
 
   /**
    * 生命周期函数--监听页面加载
