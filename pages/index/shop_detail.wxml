@@ -7,12 +7,12 @@
 
   <swiper current="{{currentTab}}" duration="{{duration}}"  bindchange="swiperTab">
     <swiper-item>
-        <view >
-          <swiper catchtap='onSwiperTap'  style='height:150px;' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <view class='swiperImg' >
+          <swiper catchtap='onSwiperTap' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
             <block wx:for="{{imgData}}" wx:key="key">
               <swiper-item>
-                <cover-image src="{{item.imgUrl}}"class="slide-image"data-id="{{item.id}}" mode='aspectFit'>
-                </cover-image>
+                <image src="{{item.imgUrl}}"class="slide-image" data-id="{{item.id}}">
+                </image>
               </swiper-item>
             </block>
           </swiper>
