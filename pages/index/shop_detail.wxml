@@ -1,4 +1,4 @@
-<!--pages/index/shop.wxml-->
+<!-- pages/index/shop.wxml
 <view class='container'>
   <view class="swiper-tab">
       <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">基本信息</view>
@@ -7,7 +7,7 @@
 
   <swiper current="{{currentTab}}" duration="{{duration}}"  bindchange="swiperTab">
     <swiper-item>
-        <view class='swiperImg' >
+         <view class='swiperImg'>
           <swiper catchtap='onSwiperTap' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
             <block wx:for="{{imgData}}" wx:key="key">
               <swiper-item>
@@ -16,8 +16,75 @@
               </swiper-item>
             </block>
           </swiper>
-        </view>
+        </view> 
+         <view id='discountView'>
+          <view></view>
+          <view></view>
+        </view> 
     </swiper-item>
     <swiper-item><view>购买记录</view></swiper-item>
   </swiper>
+</view> -->
+<view class='container'>
+  <view class="swiper-tab">
+      <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">基本信息</view>
+      <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">购买记录</view>
+  </view>
+  <!-- <swiper current="{{currentTab}}" duration="{{duration}}"  bindchange="swiperTab"> -->
+    <!-- <swiper-item> -->
+      <view class='article'>
+        <view class="page_column">
+          <view class='product_list '>
+            <view wx:for="{{productList}}" wx:key="{{item.id}}" wx:for-index="index" id='{{item.id}}' class='page_column item' catchtap="goDetail">
+              <view class='swiperImg'>
+                <swiper catchtap='onSwiperTap' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+                  <block wx:for="{{item.imgData}}" wx:key="key">
+                    <swiper-item>
+                      <image src="{{item.imgUrl}}"class="slide-image" data-id="{{item.id}}">
+                      </image>
+                    </swiper-item>
+                  </block>
+                </swiper>
+              </view>
+              <view id='discountView'>
+                <view>
+                  <text>¥{{item.discountPrice}}</text>
+                  <text>¥{{item.price}}</text>
+                </view>
+                <view>
+                  <text>{{item.deadTimeDes}}</text>
+                  <text>{{item.deadTime}}</text>
+                </view>
+              </view> 
+              <view class='title page_column'>
+              <view style='width:75%'>
+                <text>{{item.title}}</text>
+                <text style='color:#999;font-size:24rpx;'>{{item.subtitle}}</text>
+              </view>
+              <view class='fans' style=''>
+                <text>{{item.fansDes}}</text>
+                <text>{{item.fansNum}}</text>
+              </view>
+              </view>
+              <view class='content'>
+                <view class='page_column left_content'>
+                  <text>{{item.resaleTime}}</text>
+                  <text>{{item.acceptTime}}</text>
+                </view>
+                <view class='page_column '>
+                  <view class='row' wx:if="{{item.isSellout==false}}">
+                    <text>已售</text>
+                    <text style='color:#ed1991'>{{item.soldNum}}</text>
+                    <text>份/ 限量{{item.repertoryNum}}份</text>
+                  </view>
+                  <view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    <!-- </swiper-item>
+  </swiper> -->
 </view>

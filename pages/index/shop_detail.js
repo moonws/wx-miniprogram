@@ -25,6 +25,37 @@ Page({
 
       }
     ],
+    productList: [
+      {
+        id: 1,
+        title: "直采本地甜香瓜  2至3个/份  约2至2.5斤",
+        subtitle: '隔着屏幕闻着香味，百吃不厌的香瓜。基地直采',
+        resaleTime: '预售时间：6月23日-6月24日',
+        acceptTime: '提货时间：6月25日',
+        soldNum: '300',
+        repertoryNum: '9000',
+        discountPrice: '8.8',
+        price: '18.8',
+        isSellout: false,
+        deadTimeDes:"距离本商品结束还剩：",
+        deadTime:"00：14：13",
+        imgData: [
+          {
+            "imgUrl": "../../img/xianggua_detail1.png",
+            "id": "1"
+          }, {
+            "imgUrl": '../../img/xianggua_detail2.png',
+            "id": "2"
+
+          }, {
+            "imgUrl": '../../img/xianggua_detail3.png',
+            "id": "3"
+
+          }
+        ],
+        fansDes:"关注人数:",
+        fansNum:31153
+        }]
 
   },
 
