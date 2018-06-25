@@ -61,6 +61,7 @@
 #discountView view:nth-child(2) text:first-child{
   font-size: 26rpx;
   text-align: center;
+  margin-top: 10rpx;
 } 
 #discountView view:nth-child(2) text:nth-child(2){
   font-size: 40rpx;
@@ -92,8 +93,6 @@
 .product_list .item{
     border-bottom: 10px  solid #EFEFEF;
     padding: 20rpx;
-  
- 
 }
  
 .title text{
@@ -128,4 +127,144 @@
   flex-direction: row;
   color: #fff;
   border-radius: 20rpx;
+}
+.step{
+  padding:0 20rpx;
+  height: 160rpx;
+  border-bottom:10rpx solid #EFEFEF
+}
+.step text:first-child{
+  font-size: 30rpx;
+  color: #999;
+  display: block;
+  margin-top: 60rpx;
+
+}
+.stepper {  
+    width: 320rpx;  
+    height: 80rpx;  
+    border: 1px solid #ccc;  
+    border-radius: 6rpx;  
+    margin:-60rpx auto;
+    display: flex;
+    flex-direction: row;  
+}  
+  
+.stepper button {  
+    width: 80rpx;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    font-size: 40rpx;
+    border: 0px;
+}  
+.stepper input {  
+    width: 160rpx;  
+    height: 80rpx;  
+    text-align: center;  
+    font-size: 28rpx;  
+    border-left: 1px solid #ccc;  
+    border-right: 1px solid #ccc;  
+}  
+  
+.stepper .normal{  
+    color: #d4237a;
+}
+  
+.stepper .disabled{  
+    color: #ccc;  
+}
+.goodsDetail{
+  padding: 20rpx;
+  height: 500rpx;
+  border-bottom:10rpx solid #EFEFEF;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.goodsDetail .goodsDes,.imagesDetail .imagesDes{
+  display: flex;
+  flex-direction: row;
+  height: 20%;
+  width: 84%;
+  margin: 0 auto;
+}
+.goodsDetail .goodsTable{
+  border: 1px solid #ccc;
+  height: 80%;
+  width: 84%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.goodsDetail .goodsDes text,.imagesDetail .imagesDes text{
+  width: 40%;
+  color: #999;
+  font-size: 30rpx;
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+}
+.des_line{
+  margin:auto 10rpx;
+  width: 30%;
+  height: 1px;
+  background-color: #ccc;
+}
+.goodsDetail .goodsTable .tableRow{
+display: flex;
+flex-direction: row;
+height: 25%;
+color: #999;
+font-size: 28rpx;
+}
+.tableRow .td:first-child{
+width:40%;
+border-right: 1rpx solid #ddd;
+border-bottom: 1rpx solid #ddd;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.goodsTable .td:nth-child(2){
+width:60%;
+border-bottom: 1rpx solid #ddd;
+display: flex;
+padding-left:40rpx;
+align-items: center;
+color: #000;
+}
+.imagesDetail{
+  padding: 20rpx;
+  height: 260rpx;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.imageText{
+  width: 100%;
+  height: 80%;
+  color: #999;
+  font-size: 28rpx;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 0;
+}
+.imageText textarea{
+  width: 100%;
+  height: 91%;
+}
+ .imageText text{
+  width: 100%;
+  height: 10%;
+} 
+.imageList{
+  padding: 20rpx; 
+  display: flex;
+  flex-direction: column;
+  border-bottom:10rpx solid #EFEFEF
+
+}
+.imageList image{
+   width: 100%; 
 }

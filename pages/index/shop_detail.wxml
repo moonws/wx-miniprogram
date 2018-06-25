@@ -57,14 +57,14 @@
                 </view>
               </view> 
               <view class='title page_column'>
-              <view style='width:75%'>
-                <text>{{item.title}}</text>
-                <text style='color:#999;font-size:24rpx;'>{{item.subtitle}}</text>
-              </view>
-              <view class='fans' style=''>
-                <text>{{item.fansDes}}</text>
-                <text>{{item.fansNum}}</text>
-              </view>
+                <view style='width:75%'>
+                  <text>{{item.title}}</text>
+                  <text style='color:#999;font-size:24rpx;'>{{item.subtitle}}</text>
+                </view>
+                <view class='fans' style=''>
+                  <text>{{item.fansDes}}</text>
+                  <text>{{item.fansNum}}</text>
+                </view>
               </view>
               <view class='content'>
                 <view class='page_column left_content'>
@@ -82,8 +82,49 @@
                 </view>
               </view>
             </view>
+
+
+
           </view>
-        </view>
+           <!-- 数量加减容器 -->  
+          <view class='step'>
+            <text>数量</text>
+            <view class='stepper'>
+              <button class="{{minusStatus}}" bindtap="bindMinus" plain='true'>-</button> 
+              <input type="number" bindchange="bindManual" value="{{num}}" />  
+              <button class="normal" bindtap="bindPlus" plain='true'>+</button>  
+            </view>
+           </view>
+          </view>
+          <view class='goodsDetail'>
+            <view class='goodsDes'>
+              <view class='des_line'></view>
+              <text>商品详情</text>
+              <view class='des_line'></view>
+            </view>
+            <view class='goodsTable'>
+              <view class='tableRow' wx:for="{{goodsDetail}}" wx:key="">
+                <view class="td">{{item.des}}</view>
+                <view class="td">{{item.value}}</view>
+              </view>
+            </view>
+          </view>
+          <view class='imagesDetail'>
+            <view class='imagesDes'>
+              <view class='des_line'></view>
+              <text>图片详情</text>
+              <view class='des_line'></view>
+            </view>
+            <view class='imageText'>
+              <textarea>{{imagesDes}}</textarea>
+              <text>产地：{{place}}</text>
+            </view>
+          </view> 
+          <view class='imageList'>
+            <block wx:for='{{imagesUrl}}' wx:key="{{iten.id}}"> 
+              <image src='{{item.imgUrl}}' mode='scaleToFill'></image>
+            </block> 
+          </view>
       </view>
     <!-- </swiper-item>
   </swiper> -->
