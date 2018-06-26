@@ -1,3 +1,6 @@
+.container{
+  padding-bottom: 100rpx;
+}
 .article{
   margin-top: -44rpx;
 }
@@ -5,8 +8,8 @@
     width: 100%;
     border-bottom: 2rpx solid #ccc;
     text-align: center;
-     height: 88rpx; 
-    line-height: 88rpx;
+    height: 88rpx; 
+    line-height: 88rpx; 
     display: flex;
     flex-flow: row;
     justify-content: space-between;
@@ -308,4 +311,31 @@ color: #000;
 .orderProcess_tree text:nth-child(even){
   color: #999;
   font-size: 26rpx;
+}
+.footerTab{
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  height: 100rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.footerTab view{
+  width: 33.333333333%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footerTab view:not(:first-child){
+  background-color: #999;
+  color: #fff;
+  font-size: 30rpx;
+}
+.footerTab view:first-child image{
+width: 70rpx;
+height: 70rpx;
+}
+.footerTab view:nth-child(2){
+  border-right: 2rpx solid #fff;
 }
