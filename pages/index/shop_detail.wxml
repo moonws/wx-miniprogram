@@ -86,7 +86,6 @@
 
 
           </view>
-           <!-- 数量加减容器 -->  
           <view class='step'>
             <text>数量</text>
             <view class='stepper'>
@@ -125,7 +124,25 @@
               <image src='{{item.imgUrl}}' mode='scaleToFill'></image>
             </block> 
           </view>
+          <view class='orderProcess'>
+              <view class='orderProcess_title'>  
+                <text>订购流程</text>
+              </view>
+              <view class='orderProcess_content'>
+                <view class='orderProcess_img'></view>
+                <view class='orderProcess_tree'>
+                  <block wx:for='{{orderProcessData}}' wx:key='{{item.id}}'>
+                    <text>{{item.des}}</text>
+                    <text>{{item.value}}</text>
+                  </block>
+                </view>
+              </view>
+          </view>
+      </view>
+      <view class='footImg'>
+        <cover-image src='{{footImg}}'></cover-image>
       </view>
     <!-- </swiper-item>
   </swiper> -->
+
 </view>

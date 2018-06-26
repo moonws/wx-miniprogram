@@ -91,7 +91,7 @@
   height: 200px;
 }
 .product_list .item{
-    border-bottom: 10px  solid #EFEFEF;
+    border-bottom: 20rpx  solid #EFEFEF;
     padding: 20rpx;
 }
  
@@ -103,7 +103,7 @@
   border-top: 1rpx  solid #EFEFEF;
   flex-direction: row;
   justify-content: space-between;
-  padding-bottom: 10px;
+  padding-bottom: 10rpx;
 }
 .left_content{
   font-size: 14px;
@@ -131,7 +131,7 @@
 .step{
   padding:0 20rpx;
   height: 160rpx;
-  border-bottom:10rpx solid #EFEFEF
+  border-bottom:20rpx solid #EFEFEF
 }
 .step text:first-child{
   font-size: 30rpx;
@@ -177,7 +177,7 @@
 .goodsDetail{
   padding: 20rpx;
   height: 500rpx;
-  border-bottom:10rpx solid #EFEFEF;
+  border-bottom:20rpx solid #EFEFEF;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -262,9 +262,50 @@ color: #000;
   padding: 20rpx; 
   display: flex;
   flex-direction: column;
-  border-bottom:10rpx solid #EFEFEF
+  border-bottom:20rpx solid #EFEFEF
 
 }
 .imageList image{
    width: 100%; 
+}
+.orderProcess{
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 20rpx 0 20rpx;
+  height: 400rpx;
+}
+.orderProcess .orderProcess_title{
+  height: 100rpx;
+  border-bottom: 2rpx solid #ccc;
+  color: #000;
+  font-size: 30rpx; 
+  display: flex;
+  align-items: center
+
+}
+ .orderProcess .orderProcess_content{
+   height: 300rpx;
+} 
+.orderProcess .orderProcess_content{
+  display: flex;
+  flex-direction: row;
+}
+.orderProcess_img{
+  height: 220rpx;
+  width: 2rpx;
+  margin: auto 20rpx;
+  background-color:#ccc;
+}
+.orderProcess_tree{
+  display: flex;
+  flex-direction: column;
+  margin: auto 20rpx;
+}
+.orderProcess_tree text:nth-child(odd){
+  color: #000;
+  font-size: 28rpx;
+}
+.orderProcess_tree text:nth-child(even){
+  color: #999;
+  font-size: 26rpx;
 }

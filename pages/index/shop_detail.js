@@ -63,7 +63,15 @@ Page({
           { id: 7, imgUrl: "../../img/xg_imgDetail_07.png" },
           { id: 8, imgUrl: "../../img/xg_imgDetail_08.png" },
           { id: 9, imgUrl: "../../img/xg_imgDetail_09.png" }
-        ]
+        ],
+        orderProcessData:[
+          { id: 1, des:"在线付款",value:"提交订单，微信支付付款"},
+          { id: 2, des: "等待收货", value: "成功付款后，我们将及时安排发货" },
+          { id: 3, des: "门店提货", value: "在发货时间到所选门店自提" }
+
+
+        ],
+        footImg:"../../img/detail_footer.png"
 
   },
 
