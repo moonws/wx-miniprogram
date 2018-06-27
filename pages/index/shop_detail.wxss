@@ -339,3 +339,61 @@ height: 70rpx;
 .footerTab view:nth-child(2){
   border-right: 2rpx solid #fff;
 }
+.shopRecord{
+  display: flex;
+  flex-direction: column;
+  /* padding: 20rpx; */
+}
+.record_title{
+  height: 80rpx;
+  border-bottom: 2rpx solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-size: 28rpx;
+}
+.record_table{
+  display: flex;
+  flex-direction: column;
+}
+.record_table_row{
+  padding: 20rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: column;
+}
+.record_table_tr{
+display: flex;
+flex-direction: row;
+font-size: 24rpx;
+color: #000;
+align-items: center;
+}
+.record_table_tr view:first-child{
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.record_table_tr view:first-child image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.record_table_tr view:nth-child(2){
+  width: 20%;
+}
+.record_table_tr view:nth-child(3){
+  width: 40%;
+  text-align: right;
+}
+.record_footer{
+  height: 80rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: red;
+  font-size: 28rpx;
+  background-color: #ddd;
+}

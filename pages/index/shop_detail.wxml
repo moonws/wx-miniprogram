@@ -113,7 +113,26 @@
         <cover-image src='{{footImg}}'></cover-image>
       </view>
     </swiper-item>
-    <swiper-item><view>购买记录</view></swiper-item>
+    <swiper-item>
+      <view class='shopRecord'>
+        <view class='record_title'>目前工3554人参与购买，商品共销售4452份</view>
+        <view class='record_table'>
+          <view class='record_table_row' wx:for='{{shopRecordData}}' wx:key='{{item.id}}'>
+            <view class='record_table_tr'>
+              <view>
+                <image src='{{item.headImg}}'></image>
+                <text>{{item.userName}}</text>
+              </view>
+              <view>{{item.shopNum}}</view>
+              <view>{{item.orderTime}}</view>
+            </view>
+          </view>
+        </view>
+        <view class='record_footer'>
+          <text>--点击查看商品信息--</text>
+        </view>
+      </view>
+      </swiper-item>
   </swiper>
   <view class='footerTab'>
     <view>
