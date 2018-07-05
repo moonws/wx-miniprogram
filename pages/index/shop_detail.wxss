@@ -328,13 +328,45 @@ color: #000;
   justify-content: center;
 }
 .footerTab view:not(:first-child){
-  background-color: #999;
   color: #fff;
   font-size: 30rpx;
+}
+.footerTab .addCarStateNone,.footerTab .buyStateNone{
+    background-color: #999;
+    height: 100rpx;
+}
+.footerTab .addCarStateActive{
+  background-color: #d4237a;
+  height: 100rpx;
+
+}
+.footerTab .buyStateActive{
+  background-color: red;
+  height: 100rpx;
+
 }
 .footerTab view:first-child image{
 width: 70rpx;
 height: 70rpx;
+}
+.footerTab view:first-child view{
+  background-color:red;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 50%;
+  margin-top: -40rpx;
+  margin-left: -20rpx;
+}
+.footerTab view:first-child view text{
+  display: flex;
+  align-items: center;
+  justify-content: center
+}
+.footerTab view:first-child .active{
+  display:block
+}
+.footerTab view:first-child .zero{
+  display:none
 }
 .footerTab view:nth-child(2){
   border-right: 2rpx solid #fff;
@@ -369,6 +401,7 @@ flex-direction: row;
 font-size: 24rpx;
 color: #000;
 align-items: center;
+border-bottom: 2rpx solid #ccc;
 }
 .record_table_tr view:first-child{
   width: 40%;

@@ -82,7 +82,12 @@ Page({
 
 
         ],
-        footImg:"../../img/detail_footer.png"    
+        footImg:"../../img/detail_footer.png"   ,
+        addNum:0 ,
+        addNumState:'zero',
+        addCarState:'addCarStateActive',
+        buyState:'buyStateActive',
+        goodsNum:0//商品剩存量
   },
 
 
@@ -100,7 +105,13 @@ Page({
       icon: 'success',
       duration: 2000
     })
-
+    var goodsNum = this.data.goodsNum;
+    var addCarState = goodsNum <= 0 ? 'addCarStateNone' : 'addCarStateActive';
+    var buyState = goodsNum <= 0 ? 'buyStateNone' : 'buyStateActive';
+    this.setData({
+      addCarState: addCarState,
+      buyState: buyState
+    })
   },
   //滑动切换
   swiperTab: function (e) {
@@ -203,5 +214,28 @@ Page({
     this.setData({
       num: num
     });
+  },
+  addToCar:function(){
+    var goodsNum = this.data.goodsNum;
+    if (goodsNum <= 0){
+      wx.showModal({
+        title: '提示信息',
+        content: '该商品已售罄或者活动已结束',
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+          }
+        }
+      })
+      return false;
+    }
+    var addNum = this.data.addNum;
+    addNum++;
+    var addNumState= addNum > 0 ? 'active' : 'zero';
+    this.setData({
+      addNum: addNum,
+      addNumState: addNumState
+    })
+    console.log("addNum==>" + addNum);
   }  
 })
