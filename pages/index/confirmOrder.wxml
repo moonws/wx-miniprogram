@@ -1,3 +1,5 @@
-<view>
-<text>确认订单</text>
-</view>
+<view class='container'>
+  <view class='locationInfo'>
+  
+  </view>
+</view> 

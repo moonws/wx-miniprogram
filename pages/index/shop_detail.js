@@ -97,14 +97,14 @@ Page({
   onLoad: function (options) {
     console.log(options);
     var id = options.id;
-    this.setData({
-      id:id
-    });
     wx.showToast({
       title: '获取到的id=' + id,
       icon: 'success',
       duration: 2000
     })
+    this.setData({
+      id: id
+    });
     var goodsNum = this.data.goodsNum;
     var addCarState = goodsNum <= 0 ? 'addCarStateNone' : 'addCarStateActive';
     var buyState = goodsNum <= 0 ? 'buyStateNone' : 'buyStateActive';
@@ -112,7 +112,7 @@ Page({
       addCarState: addCarState,
       buyState: buyState
     })
-  },
+     },
   //滑动切换
   swiperTab: function (e) {
     var that = this;

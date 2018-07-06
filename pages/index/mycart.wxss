@@ -1,1 +1,21 @@
 /* pages/index/mycart.wxss */
+.cart{
+  display: flex;
+  flex-direction: column;
+}
+.cart .item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 88px;
+  padding: 20rpx;
+
+}
+.item-content {
+  display: flex;
+  flex-direction: row;
+  margin-left:10px;
+  height:100%;
+align-items:center;
+
+}

@@ -1,27 +1,32 @@
-<!--index.wxml-->
-<!-- <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view> -->
-  <view class='page-row' style=''>
-      <view style=' height: 96px; width: 128px;'>
+<view class='page-row'>
+      <view style=' height: 96px; width: 96px;'>
           <image style=' height:96px;width:96px;border-radius:48px;' src="{{userInfo.avatarUrl}}"></image>
       </view>
       <view class='page-column nick'>
+          <text>累计积分  99</text>
           <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-
+      </view>
+      <view class='userinfo-right'>
+          可用积分 22 >
       </view>
   </view>
-  <view class='page-column'>
-      <view>全部订单</view>
-      <view>未付款</view>
-      <view>待提货</view>
-      <view>已提货</view>
-
+  <view class='page-column myList'>
+      <view class='item' data-type="1" bindtap="gotoOrdDtl" >
+         <view>全部订单</view>
+         <image  style ="width:20px;height:20px"src="../../img/arrowright.png"></image>
+      </view>
+        <view class='item' data-type="2" bindtap="gotoOrdDtl">
+         <view>待提货</view>
+         <image  style ="width:20px;height:20px"src="../../img/arrowright.png"></image>
+      </view>
+        <view class='item' data-type="3" bindtap="gotoOrdDtl">
+         <view>未付款</view>
+         <image  style ="width:20px;height:20px"src="../../img/arrowright.png"></image>
+      </view>
+        <view class='item' data-type="4" bindtap="gotoOrdDtl">
+         <view>已提货</view>
+         <image  style ="width:20px;height:20px"src="../../img/arrowright.png"></image>
+      </view>
   </view>
 <!--   
   <view class="usermotto">

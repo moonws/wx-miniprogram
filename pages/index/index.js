@@ -27,8 +27,8 @@ Page({
         acceptTime: '提货时间：6月25日',
         soldNum: '12',
         repertoryNum: '9000',
-        discountPrice: '90.99',
-        price: '19.99',
+        price: '90.99',
+        discountPrice: '19.99',
   headImg:'http://apimagev.frxs.cn/productAdImg/20180623/100percent_513862c3-f7c2-4445-9941-3df979ca071c1529719196513.jpg',
         alreadySold: ['小王', '涛哥', '黄大爷']
 
@@ -41,8 +41,8 @@ Page({
         acceptTime: '提货时间：6月25日',
         soldNum: '11',
         repertoryNum: '9000',
-        discountPrice: '910.99',
-        price: '199.99',
+        price: '910.99',
+        discountPrice: '199.99',
         headImg: 'http://apimagev.frxs.cn/productAdImg/20180622/100percent_0061ab87-03de-4b40-bbb3-0a7054dd36bb1529661129123.jpg',
         alreadySold: ['小王', '涛哥', '黄大爷']
 
@@ -55,8 +55,8 @@ Page({
         acceptTime: '提货时间：6月25日',
         soldNum: '11',
         repertoryNum: '9000',
-        discountPrice: '610.99',
-        price: '169.99',
+        price: '610.99',
+        discountPrice: '169.99',
         headImg:'http://apimagev.frxs.cn/productAdImg/20180622/100percent_0061ab87-03de-4b40-bbb3-0a7054dd36bb1529661129123.jpg',
         alreadySold: ['小王', '涛哥', '黄大爷']
 
@@ -136,6 +136,8 @@ Page({
   },
   goDetail: function (e) {
     console.log(e);
+    //// pages/index/orderDetails.js
+
     var id = e.currentTarget.id
     wx.navigateTo({
       url: '../index/shop_detail?id=' + id

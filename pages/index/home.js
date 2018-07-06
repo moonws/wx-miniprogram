@@ -76,5 +76,13 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  gotoOrdDtl:function(e){
+    console.log(e.currentTarget.dataset.type);
+    //// pages/index/orderDetails.js
+
+    wx.navigateTo({
+      url: '../index/order_details?type=' + e.currentTarget.dataset.type
+    })
   }
 })
