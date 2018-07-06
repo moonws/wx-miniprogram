@@ -8,7 +8,10 @@ page{
 .page-row{
   display: flex;
   flex-direction: row;
+
   margin: 20rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
 }
 .page-row view:first{
   border: 0px;
@@ -20,4 +23,36 @@ page{
 }
 .nick{
   align-self:flex-end
+}
+.userinfo-nickname{
+  margin-bottom: 10rpx;
+}
+.userinfo-right{
+  align-self:center;
+flex-grow:1;
+text-align:right;
+margin-right:10px;
+
+}
+.myList{
+  margin: 20rpx;
+  background-color: white;
+  border-radius: 20rpx;
+}
+
+.myList .item{
+  border-bottom: 1px solid #efefef;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-content:center;
+}
+.myList view{
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  line-height: 44px; 
+}
+.myList image{
+
+  margin-top: 12px;
 }

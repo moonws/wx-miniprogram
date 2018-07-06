@@ -7,7 +7,8 @@
     "pages/index/shop_detail",
     "pages/index/detail",
     "pages/search/search",
-    "pages/index/mycart"
+    "pages/index/mycart",
+    "pages/index/order_details"
   ],
   "window": {
     "backgroundTextStyle": "light",

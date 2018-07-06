@@ -1,6 +1,5 @@
-<!shopIndex.wxml-->
 <view class="container">
-  <view>
+<view>
     <cover-image src="{{titleImg}}"></cover-image>
   </view>
   <view class="search">

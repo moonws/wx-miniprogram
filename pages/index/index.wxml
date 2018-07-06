@@ -40,7 +40,7 @@
             <view wx:else style='text-align: center;font-size:16px;'>已售罄 </view>
   
             <view>
-              <button class='go_cat' catchtap="goCat" id="1">
+              <button class='go_cat' catchtap="goCat" id="{{item.id}}">
                 <text>加入购物车</text>
               </button>
             </view>

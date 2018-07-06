@@ -1,50 +1,25 @@
-// pages/index/shop.js
+// pages/index/orderDetails.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    id:'',
-    currentTab: 0
-
+  
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options);
-    var id = options.id;
+    var type = options.type;
     wx.showToast({
-      title: '获取到的id=' + id,
+      title: '获取到的id=' + type,
       icon: 'success',
       duration: 2000
     });
-    this.setData({
-      id:id
-    });
-   
+  },
 
-  },
-  //滑动切换
-  swiperTab: function (e) {
-    var that = this;
-    that.setData({
-      currentTab: e.detail.current
-    });
-  },
-  //点击切换
-  clickTab: function (e) {
-    var that = this;
-    if (this.data.currentTab === e.target.dataset.current) {
-      return false;
-    } else {
-      that.setData({
-        currentTab: e.target.dataset.current
-      })
-    }
-  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
