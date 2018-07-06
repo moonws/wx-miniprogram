@@ -87,7 +87,7 @@ Page({
         addNumState:'zero',
         addCarState:'addCarStateActive',
         buyState:'buyStateActive',
-        goodsNum:0//商品剩存量
+        goodsNum:2//商品剩存量
   },
 
 
@@ -236,6 +236,32 @@ Page({
       addNum: addNum,
       addNumState: addNumState
     })
-    console.log("addNum==>" + addNum);
+  },
+  goCar:function(e){
+    console.log(e);
+    var id = e.currentTarget.id
+      wx.navigateTo({
+      url: '../index/mycart?id=' + id
+    })
+  },
+  goBuy:function(e){
+    var goodsNum = this.data.goodsNum;
+    if (goodsNum <= 0) {
+      wx.showModal({
+        title: '提示信息',
+        content: '该商品已售罄或者活动已结束',
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+          }
+        }
+      })
+      return false;
+    }
+    console.log(e);
+    var id = e.currentTarget.id
+    wx.navigateTo({
+      url: '../index/confirmOrder?id=' + id
+    })
   }  
 })

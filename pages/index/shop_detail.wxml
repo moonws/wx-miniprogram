@@ -135,16 +135,16 @@
       </swiper-item>
   </swiper>
   <view class='footerTab'>
-    <view>
+    <view  catchtap="goCar">
       <image src='../../img/shopCar.png'></image>
       <view  class='{{addNumState}}'>
             <text>{{addNum}}</text>
       </view>
     </view>
-    <view class='{{addCarState}}'>
-      <text bindtap='addToCar'>加入购物车</text>
+    <view class='{{addCarState}}' bindtap='addToCar'>
+      <text>加入购物车</text>
     </view>
-    <view class='{{buyState}}'>
+    <view class='{{buyState}}' catchtap="goBuy">
       <text>立即购买</text>
     </view>
   </view>
