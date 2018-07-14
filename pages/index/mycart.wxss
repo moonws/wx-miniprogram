@@ -5,10 +5,12 @@
 }
 .cart .item{
   display: flex;
-  flex-direction: row;
+   flex-direction: row; 
   align-items: center;
   height: 88px;
   padding: 20rpx;
+  justify-content: space-between;
+  margin-right: -94px;
 
 }
 .item-content {

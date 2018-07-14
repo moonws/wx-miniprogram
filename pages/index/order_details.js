@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    isShow: true,
+    currentTab: 1,
+
   },
 
   /**
@@ -13,6 +15,9 @@ Page({
    */
   onLoad: function (options) {
     var type = options.type;
+    this.setData({
+      currentTab: type
+    });
     wx.showToast({
       title: '获取到的id=' + type,
       icon: 'success',
@@ -67,5 +72,16 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+  swichNav: function (e) {
+    if (this.data.currentTab === e.target.dataset.current) {
+      return false;
+    } else {
+      var showMode = e.target.dataset.current == 0;
+      this.setData({
+        currentTab: e.target.dataset.current,
+        isShow: showMode
+      })
+    }
+  },
 })
