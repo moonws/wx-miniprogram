@@ -1,10 +1,19 @@
 .container{
   display: flex;
   flex-direction: column;
+  background-color: #EFEFEF
 }
 .locationInfo{
   height: 200rpx;
   display: flex;
   flex-direction: column;
-  border: 1px solid #d4237a
+  border: 1px dashed #d4237a;
+  margin-bottom: 20rpx;
 }
+.goodsInfo{
+  display: flex;
+  flex-direction: column;
+  height: 400rpx;
+  border: 1px solid red;
+   background-color: #fff; 
+  }
