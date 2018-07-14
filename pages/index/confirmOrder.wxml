@@ -1,7 +1,13 @@
 <view class='container'>
   <view class='locationInfo'>
+    <view>
+      <text>收货人：</text>
+      <input type='text' class='userinfo-nickname'>{{userInfo.nickName}}</input>
+      <input type='number' ></input>
+    </view>
 
   </view>
   <view class='goodsInfo'>
   </view>
+
 </view> 

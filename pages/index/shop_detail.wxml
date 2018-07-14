@@ -128,7 +128,7 @@
             </view>
           </view>
         </view>
-        <view class='record_footer'>
+        <view class='record_footer' catchtap="goDetail">
           <text>--点击查看商品信息--</text>
         </view>
       </view>

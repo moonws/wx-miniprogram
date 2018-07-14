@@ -263,5 +263,14 @@ Page({
     wx.navigateTo({
       url: '../index/confirmOrder?id=' + id
     })
+  },
+  goDetail:function(e){
+    var currentTab=0;
+    var that=this;
+    that.setData({
+      currentTab: currentTab
+    })
+
+
   }  
 })

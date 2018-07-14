@@ -15,5 +15,5 @@
   flex-direction: column;
   height: 400rpx;
   border: 1px solid red;
-   background-color: #fff; 
+  background-color: #fff; 
   }
