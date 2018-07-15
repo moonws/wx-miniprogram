@@ -1,10 +1,10 @@
 <view class='container'>
   <view class="swiper-tab">
-      <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">基本信息</view>
-      <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">购买记录</view>
+    <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">基本信息</view>
+    <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">购买记录</view>
   </view>
-  <swiper current="{{currentTab}}" duration="{{duration}}"  bindchange="swiperTab" style='height:6800rpx;'>
-     <swiper-item>
+  <swiper current="{{currentTab}}" duration="{{duration}}" bindchange="swiperTab" style='height:6800rpx;'>
+    <swiper-item>
       <view class='article'>
         <view class="page_column">
           <view class='product_list '>
@@ -13,7 +13,7 @@
                 <swiper catchtap='onSwiperTap' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
                   <block wx:for="{{item.imgData}}" wx:key="key">
                     <swiper-item>
-                      <image src="{{item.imgUrl}}"class="slide-image" data-id="{{item.id}}">
+                      <image src="{{item.imgUrl}}" class="slide-image" data-id="{{item.id}}">
                       </image>
                     </swiper-item>
                   </block>
@@ -28,7 +28,7 @@
                   <text>{{item.deadTimeDes}}</text>
                   <text>{{item.deadTime}}</text>
                 </view>
-              </view> 
+              </view>
               <view class='title page_column'>
                 <view style='width:75%'>
                   <text>{{item.title}}</text>
@@ -59,55 +59,55 @@
           <view class='step'>
             <text>数量</text>
             <view class='stepper'>
-              <button class="{{minusStatus}}" bindtap="bindMinus" plain='true'>-</button> 
-              <input type="number" bindchange="bindManual" value="{{num}}" />  
-              <button class="normal" bindtap="bindPlus" plain='true'>+</button>  
-            </view>
-           </view>
-          </view>
-          <view class='goodsDetail'>
-            <view class='goodsDes'>
-              <view class='des_line'></view>
-              <text>商品详情</text>
-              <view class='des_line'></view>
-            </view>
-            <view class='goodsTable'>
-              <view class='tableRow' wx:for="{{goodsDetail}}" wx:key="">
-                <view class="td">{{item.des}}</view>
-                <view class="td">{{item.value}}</view>
-              </view>
+              <button class="{{minusStatus}}" bindtap="bindMinus" plain='true'>-</button>
+              <input type="number" bindchange="bindManual" value="{{num}}" />
+              <button class="normal" bindtap="bindPlus" plain='true'>+</button>
             </view>
           </view>
-          <view class='imagesDetail'>
-            <view class='imagesDes'>
-              <view class='des_line'></view>
-              <text>图片详情</text>
-              <view class='des_line'></view>
-            </view>
-            <view class='imageText'>
-              <textarea>{{imagesDes}}</textarea>
-              <text>产地：{{place}}</text>
-            </view>
-          </view> 
-          <view class='imageList'>
-            <block wx:for='{{imagesUrl}}' wx:key="{{iten.id}}"> 
-              <image src='{{item.imgUrl}}' mode='scaleToFill'></image>
-            </block> 
+        </view>
+        <view class='goodsDetail'>
+          <view class='goodsDes'>
+            <view class='des_line'></view>
+            <text>商品详情</text>
+            <view class='des_line'></view>
           </view>
-          <view class='orderProcess'>
-              <view class='orderProcess_title'>  
-                <text>订购流程</text>
-              </view>
-              <view class='orderProcess_content'>
-                <view class='orderProcess_img'></view>
-                <view class='orderProcess_tree'>
-                  <block wx:for='{{orderProcessData}}' wx:key='{{item.id}}'>
-                    <text>{{item.des}}</text>
-                    <text>{{item.value}}</text>
-                  </block>
-                </view>
-              </view>
+          <view class='goodsTable'>
+            <view class='tableRow' wx:for="{{goodsDetail}}" wx:key="">
+              <view class="td">{{item.des}}</view>
+              <view class="td">{{item.value}}</view>
+            </view>
           </view>
+        </view>
+        <view class='imagesDetail'>
+          <view class='imagesDes'>
+            <view class='des_line'></view>
+            <text>图片详情</text>
+            <view class='des_line'></view>
+          </view>
+          <view class='imageText'>
+            <textarea>{{imagesDes}}</textarea>
+            <text>产地：{{place}}</text>
+          </view>
+        </view>
+        <view class='imageList'>
+          <block wx:for='{{imagesUrl}}' wx:key="{{iten.id}}">
+            <image src='{{item.imgUrl}}' mode='scaleToFill'></image>
+          </block>
+        </view>
+        <view class='orderProcess'>
+          <view class='orderProcess_title'>
+            <text>订购流程</text>
+          </view>
+          <view class='orderProcess_content'>
+            <view class='orderProcess_img'></view>
+            <view class='orderProcess_tree'>
+              <block wx:for='{{orderProcessData}}' wx:key='{{item.id}}'>
+                <text>{{item.des}}</text>
+                <text>{{item.value}}</text>
+              </block>
+            </view>
+          </view>
+        </view>
       </view>
       <view class='footImg'>
         <cover-image src='{{footImg}}'></cover-image>
@@ -132,13 +132,13 @@
           <text>--点击查看商品信息--</text>
         </view>
       </view>
-      </swiper-item>
+    </swiper-item>
   </swiper>
   <view class='footerTab'>
-    <view  catchtap="goCar">
+    <view catchtap="goCar">
       <image src='../../img/shopCar.png'></image>
-      <view  class='{{addNumState}}'>
-            <text>{{addNum}}</text>
+      <view class='{{addNumState}}'>
+        <text>{{addNum}}</text>
       </view>
     </view>
     <view class='{{addCarState}}' bindtap='addToCar'>

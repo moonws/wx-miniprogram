@@ -5,6 +5,22 @@ Page({
    * 页面的初始数据
    */
   data: {
+    location:"湖南省长沙市岳麓区观沙岭街道枫林绿洲1栋105号门面",
+    takeLocation:"岳麓枫林绿洲有滋零食店50012020店",
+    callPhone:"18684677755",
+    shopOrderDetail:[{
+      id:1,
+      shopImageUrl: "../../img/xianggua_detail1.png",
+      title:"直采本地甜香瓜2至3个/份,约2至2.5斤",
+      subTitle:"一级果约2至2.5斤",
+      time:"07月16日  16:00提货"
+    }],
+    discountPrice: 8.8,
+    price: 18.8,
+    minusStatus: 'disabled',
+    num: 1,
+    totalPrice: 8.8
+    
   
   },
 
@@ -63,7 +79,51 @@ Page({
   onShareAppMessage: function () {
 
   },
-
+  /* 点击减号 */
+  bindMinus: function () {
+    var num = this.data.num;
+    // 如果大于1时，才可以减  
+    if (num > 1) {
+      num--;
+    }
+    // 只有大于一件的时候，才能normal状态，否则disable状态  
+    var minusStatus = num <= 1 ? 'disabled' : 'normal';
+    var discountPrice = this.data.discountPrice;
+    var totalPrice = (num * discountPrice).toFixed(2);
+    console.log("totalPrice---==>" + totalPrice)
+    // 将数值与状态写回  
+    this.setData({
+      num: num,
+      minusStatus: minusStatus,
+      totalPrice: totalPrice
+    });
+  },
+  /* 点击加号 */
+  bindPlus: function () {
+    var num = this.data.num;
+    // 不作过多考虑自增1  
+    num++;
+    // 只有大于一件的时候，才能normal状态，否则disable状态  
+    var minusStatus = num < 1 ? 'disabled' : 'normal';
+    var discountPrice = this.data.discountPrice;
+    var totalPrice = (num * discountPrice).toFixed(2);
+    console.log("totalPrice---==>" + totalPrice)
+    // 将数值与状态写回  
+    this.setData({
+      num: num,
+      minusStatus: minusStatus,
+      totalPrice: totalPrice
+    });
+  },
+  /* 输入框事件 */
+  bindManual: function (e) {
+    var num = e.detail.value;
+    console.log("nunm===>"+num);
+    // 将数值与状态写回  
+    this.setData({
+      num: num
+    });
+  },
 
 
 })

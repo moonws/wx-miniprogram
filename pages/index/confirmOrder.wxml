@@ -1,13 +1,59 @@
 <view class='container'>
   <view class='locationInfo'>
-    <view>
+    <view class='userInfo'>
       <text>收货人：</text>
-      <input type='text' class='userinfo-nickname'>{{userInfo.nickName}}</input>
-      <input type='number' ></input>
+      <view>
+        <input type='text' class='userinfo-nickname' value='{{userInfo.nickName}}'></input>
+      </view>
+      <view>
+        <input type='number'></input>
+      </view>
+    </view>
+    <view class='location'>
+      <text>提货地点：</text>
+      <text>{{location}}</text>
+    </view>
+    <view class='takeLocation'>
+      <text>自提点：</text>
+      <text>{{takeLocation}}  </text>
+      <text>{{callPhone}}</text>
     </view>
 
   </view>
   <view class='goodsInfo'>
+    <view class='shopDetail' wx:for="{{shopOrderDetail}}" wx:key="item.id">
+      <view>
+        <image src='{{item.shopImageUrl}}' mode='aspectFit'></image>
+      </view>
+      <view>
+        <text>{{item.title}}</text>
+        <text>{{item.subTitle}}</text>
+        <text>{{item.time}}</text>
+        <view>
+          <text>¥{{discountPrice}}</text>
+          <text>¥{{price}}</text>
+          <text>x{{num}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='step'>
+      <text>购买数量</text>
+      <view class='stepper'>
+        <button class="{{minusStatus}}" bindtap="bindMinus" plain='true'>-</button>
+        <input type="number" bindchange="bindManual" value="{{num}}" />
+        <button class="normal" bindtap="bindPlus" plain='true'>+</button>
+      </view>
+    </view>
+  </view>
+  <view class='totalPrice'>
+    <view>
+      <text>共{{num}}件商品 合计：</text>
+      <text>¥{{totalPrice}}</text>
+    </view>
+    <view>
+     <text>应付金额：</text>
+     <text>¥{{totalPrice}}</text>
+    </view>
   </view>
 
-</view> 
+</view>
