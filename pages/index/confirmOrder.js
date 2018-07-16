@@ -19,7 +19,9 @@ Page({
     price: 18.8,
     minusStatus: 'disabled',
     num: 1,
-    totalPrice: 8.8
+    totalPrice: 8.8,
+    showModal: false
+
     
   
   },
@@ -124,6 +126,23 @@ Page({
       num: num
     });
   },
+  submit: function () {
+    this.setData({
+      showModal: true
+    })
+  },
+
+  preventTouchMove: function () {
+
+  },
+
+
+  cancel: function () {
+    this.setData({
+      showModal: false
+    })
+  }
+
 
 
 })

@@ -55,5 +55,30 @@
      <text>¥{{totalPrice}}</text>
     </view>
   </view>
-
+  <view class='submit'>
+    <button type="primary" bindtap="submit"> 提交 </button>
+  </view>
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modalDlg" wx:if="{{showModal}}">
+    <view class='modalTitle'>
+        <text>此商品需要您到店自提，请仔细确认地址！</text>
+    </view>
+    <view class='modalContent' wx:for="{{shopOrderDetail}}" wx:key="item.id">
+      <view>
+        <text>提货地址：</text>
+        <text>{{location}}</text>
+      </view>
+      <view>
+        <text>自提点：</text>
+        <text>({{takeLocation}}  {{callPhone}})</text>
+      </view>
+      <view>
+      <text>{{item.time}}</text>
+      </view>
+    </view>
+    <view class='modalBtn'>
+        <button class='cancelBtn' bindtap="cancel" plain='false'>取消付款</button>
+        <button class='confirmBtn' plain='false'>确认订单</button>
+    </view>
+</view>
 </view>
