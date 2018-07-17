@@ -266,6 +266,12 @@ Page({
     wx.navigateTo({
       url: '../index/confirmOrder?id=' + id
     })
+    wx.showLoading({
+      title: '数据加载中',
+    })
+    setTimeout(function () {
+      wx.hideLoading()
+    }, 1000)
   },
   goDetail:function(e){
     var currentTab=0;
@@ -273,6 +279,7 @@ Page({
     that.setData({
       currentTab: currentTab
     })
+
 
 
   }  
