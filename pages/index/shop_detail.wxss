@@ -416,6 +416,9 @@ border-bottom: 2rpx solid #ccc;
 .record_table_tr view:nth-child(2){
   width: 20%;
 }
+.record_table_tr view:nth-child(2) span,.record_title span{
+  color: #d4237a;
+}
 .record_table_tr view:nth-child(3){
   width: 40%;
   text-align: right;
@@ -426,7 +429,7 @@ border-bottom: 2rpx solid #ccc;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: red;
+  color: #d4237a;
   font-size: 28rpx;
   background-color: #ddd;
 }

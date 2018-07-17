@@ -12,15 +12,15 @@ Page({
     interval: 5000,
     duration: 1000,
     shopRecordData: [
-      { id: 1, headImg: '../../img/shopCar.png', userName: '黄**', shopNum: "2份", orderTime: "2018-06-27 12:01:17" },
-      { id: 2, headImg: '../../img/shopCar.png', userName: '王**', shopNum: "1份", orderTime: "2018-06-27 12:01:17" },
-      { id: 3, headImg: '../../img/shopCar.png', userName: '李**', shopNum: "2份", orderTime: "2018-06-27 12:01:17" },
-      { id: 4, headImg: '../../img/shopCar.png', userName: '吴*', shopNum: "5份", orderTime: "2018-06-27 12:01:17" },
-      { id: 5, headImg: '../../img/shopCar.png', userName: '赵**', shopNum: "1份", orderTime: "2018-06-27 12:01:17" },
-      { id: 6, headImg: '../../img/shopCar.png', userName: '韩**', shopNum: "1份", orderTime: "2018-06-27 12:01:17" },
-      { id: 7, headImg: '../../img/shopCar.png', userName: '何**', shopNum: "1份", orderTime: "2018-06-27 12:01:17" },
-      { id: 8, headImg: '../../img/shopCar.png', userName: '张*', shopNum: "1份", orderTime: "2018-06-27 12:01:17" },
-      { id: 9, headImg: '../../img/shopCar.png', userName: '甘**', shopNum: "2份", orderTime: "2018-06-27 12:01:17" }
+      { id: 1, headImg: '../../img/shopCar.png', userName: '黄**', shopNum: 2, orderTime: "2018-06-27 12:01:17" },
+      { id: 2, headImg: '../../img/shopCar.png', userName: '王**', shopNum: 1, orderTime: "2018-06-27 12:01:17" },
+      { id: 3, headImg: '../../img/shopCar.png', userName: '李**', shopNum: 2, orderTime: "2018-06-27 12:01:17" },
+      { id: 4, headImg: '../../img/shopCar.png', userName: '吴*', shopNum: 5, orderTime: "2018-06-27 12:01:17" },
+      { id: 5, headImg: '../../img/shopCar.png', userName: '赵**', shopNum: 1, orderTime: "2018-06-27 12:01:17" },
+      { id: 6, headImg: '../../img/shopCar.png', userName: '韩**', shopNum: 1, orderTime: "2018-06-27 12:01:17" },
+      { id: 7, headImg: '../../img/shopCar.png', userName: '何**', shopNum: 1, orderTime: "2018-06-27 12:01:17" },
+      { id: 8, headImg: '../../img/shopCar.png', userName: '张*', shopNum: 1, orderTime: "2018-06-27 12:01:17" },
+      { id: 9, headImg: '../../img/shopCar.png', userName: '甘**', shopNum: 2, orderTime: "2018-06-27 12:01:17" }
     ],
     productList: [
       {
@@ -87,7 +87,10 @@ Page({
         addNumState:'zero',
         addCarState:'addCarStateActive',
         buyState:'buyStateActive',
-        goodsNum:2//商品剩存量
+        goodsNum:2,//商品剩存量
+        peopelNum:334,
+        saleNum:2345
+
   },
 
 

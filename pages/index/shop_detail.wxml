@@ -115,7 +115,11 @@
     </swiper-item>
     <swiper-item>
       <view class='shopRecord'>
-        <view class='record_title'>目前工3554人参与购买，商品共销售4452份</view>
+        <view class='record_title'>目前工
+          <span>{{peopelNum}}</span>
+          人参与购买，商品共销售
+          <span>{{saleNum}}</span>份
+        </view>
         <view class='record_table'>
           <view class='record_table_row' wx:for='{{shopRecordData}}' wx:key='{{item.id}}'>
             <view class='record_table_tr'>
@@ -123,7 +127,7 @@
                 <image src='{{item.headImg}}'></image>
                 <text>{{item.userName}}</text>
               </view>
-              <view>{{item.shopNum}}</view>
+              <view><span>{{item.shopNum}}</span>份</view>
               <view>{{item.orderTime}}</view>
             </view>
           </view>

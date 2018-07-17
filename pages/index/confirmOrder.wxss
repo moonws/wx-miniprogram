@@ -7,9 +7,9 @@
   height: 140rpx;
   display: flex;
   flex-direction: column;
-  border: 1px dashed #d4237a;
-  margin-bottom: 20rpx;
-  padding: 20rpx;
+  border-bottom: 20rpx solid #EFEFEF;
+  border-top:2rpx solid #EFEFEF; 
+  padding:20rpx;
   font-size: 24rpx;
 }
 .userInfo{
@@ -26,7 +26,7 @@
 .userInfo view{
   width: 30%;
   height: 50rpx;
-  border: 1px solid #ccc;
+  border: 2rpx solid #EFEFEF;
   margin-right:10rpx;
 }
 .location{
@@ -41,8 +41,7 @@
   display: flex;
   flex-direction: column;
   height: 320rpx;
-  border: 1px solid #ccc;
-  margin-bottom: 20rpx;
+  border-bottom: 2rpx solid #EFEFEF;
   }
   .shopDetail{
     padding: 20rpx;
@@ -50,7 +49,7 @@
     flex-direction: row;
     height: 180rpx;
     align-items: center;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 2rpx solid #EFEFEF;
   }
   .shopDetail view:first-child{
     width: 25%;
@@ -111,7 +110,7 @@
 .stepper {
     width: 320rpx;  
     height: 80rpx;  
-    border: 1px solid #ccc;  
+    border: 2rpx solid #ccc;  
     border-radius: 6rpx;  
     display: flex;
     flex-direction: row; 
@@ -131,8 +130,8 @@
     height: 80rpx;  
     text-align: center;  
     font-size: 28rpx;  
-    border-left: 1px solid #ccc;  
-    border-right: 1px solid #ccc;  
+    border-left: 2rpx solid #ccc;  
+    border-right: 2rpx solid #ccc;  
 }  
   
 .stepper .normal{  
@@ -143,8 +142,9 @@
     color: #ccc;  
 }
 .totalPrice{
-  border: 1px solid #ccc;
-  height: 100rpx;
+  border-bottom: 2rpx solid #EFEFEF;
+  border-top:20rpx solid #EFEFEF; 
+  height: 80rpx;
   display: flex;
   flex-direction: column;
   padding: 20rpx;
@@ -171,7 +171,7 @@
 }
 .submit{
   position: fixed;
-  bottom: 20rpx;
+  bottom: 40rpx;
   width: 100%; 
 }
 .submit button{

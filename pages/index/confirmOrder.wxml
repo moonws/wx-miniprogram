@@ -78,7 +78,7 @@
     </view>
     <view class='modalBtn'>
         <button class='cancelBtn' bindtap="cancel" plain='false'>取消付款</button>
-        <button class='confirmBtn' plain='false'>确认订单</button>
+        <button class='confirmBtn' plain='false' bindtap='confirmBtn'>确认订单</button>
     </view>
 </view>
 </view>

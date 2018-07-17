@@ -92,7 +92,6 @@ Page({
     var minusStatus = num <= 1 ? 'disabled' : 'normal';
     var discountPrice = this.data.discountPrice;
     var totalPrice = (num * discountPrice).toFixed(2);
-    console.log("totalPrice---==>" + totalPrice)
     // 将数值与状态写回  
     this.setData({
       num: num,
@@ -135,11 +134,14 @@ Page({
   preventTouchMove: function () {
 
   },
-
-
   cancel: function () {
     this.setData({
       showModal: false
+    })
+  },
+  confirmBtn:function(){
+    wx.navigateTo({
+      url: '../index/payType'
     })
   }
 
