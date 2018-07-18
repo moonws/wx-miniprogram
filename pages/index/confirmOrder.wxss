@@ -173,10 +173,12 @@
   position: fixed;
   bottom: 40rpx;
   width: 100%; 
+  
 }
 .submit button{
  margin: 20rpx;
-
+ background-color: #d4237a;
+ color: #fff;
 }
 .mask{
     width: 100%;

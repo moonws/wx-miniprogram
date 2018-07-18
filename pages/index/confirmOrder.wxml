@@ -56,7 +56,7 @@
     </view>
   </view>
   <view class='submit'>
-    <button type="primary" bindtap="submit"> 提交 </button>
+    <button type="" bindtap="submit"> 提交 </button>
   </view>
 <view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
 <view class="modalDlg" wx:if="{{showModal}}">
