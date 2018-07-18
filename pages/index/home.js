@@ -31,7 +31,8 @@ Page({
       },
       success: function (res) {
         console.log("userInfo>res:");
-        console.log(res.data)
+        console.log(res.data.data);
+        wx.setStorageSync('userInfo', res.data.data);
         superThis.setData({
           motto: res.data.data.username,
           phone: res.data.data.phone
@@ -40,6 +41,7 @@ Page({
     });
     if (app.globalData.userInfo) {
       console.log(app.globalData.userInfo);
+      wx.setStorageSync('wxInfo', app.globalData.userInfo);
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true

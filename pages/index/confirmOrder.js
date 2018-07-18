@@ -5,6 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
+    wxInfo:{},
+    userInfo:{},
     location:"湖南省长沙市岳麓区观沙岭街道枫林绿洲1栋105号门面",
     takeLocation:"岳麓枫林绿洲有滋零食店50012020店",
     callPhone:"18684677755",
@@ -30,8 +32,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+      var wxInfo = wx.getStorageSync('wxInfo');
+      var userInfo = wx.getStorageSync('userInfo');
+      console.log("userInfo==>")
+      console.log(userInfo);
+      this.setData({
+        wxInfo: wxInfo,
+        userInfo: userInfo
 
-  },
+      });
+      },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
