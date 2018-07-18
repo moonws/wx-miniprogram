@@ -3,10 +3,10 @@
     <view class='userInfo'>
       <text>收货人：</text>
       <view>
-        <input type='text' class='userinfo-nickname' value='{{userInfo.nickName}}'></input>
+        <input type='text' class='userinfo-nickname' value='还是要微笑。'></input>
       </view>
       <view>
-        <input type='number'></input>
+        <input type='number' value='15873176452'></input>
       </view>
     </view>
     <view class='location'>
